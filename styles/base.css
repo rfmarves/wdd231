@@ -1,0 +1,227 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #104560;  /*use  with white text*/
+    --secondary-color: #F19F0D; /*use  with black text*/
+    --accent1-color: #572C7D; /*use  with white text*/
+    --accent2-color: #1AD214; /*use  with black text*/
+    --page-background: #fafafa;
+    --card-background: white;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Zilla Slab";
+    --paragraph-font: "Raleway", sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --primary-color-text: white;
+    --secondary-color-text: black;
+    --accent1-color-text: white;
+    --accent2-color-text: black;
+    --nav-link-color: var(--primary-color-text);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--secondary-color-text);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--page-background);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+header,
+footer {
+    color: var(--primary-color-text);
+    background-color: var(--primary-color);
+}
+
+.header {
+    display: flex;
+    padding: 0.5rem;
+}
+
+header h1 { 
+    padding: 1rem;
+    flex: 1 1 100%;
+    font-size: 3rem;
+}
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    content: "a";
+    color: white;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#logo-link > img {
+    border-radius: 15px;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    display: none;
+}
+
+nav.show {
+    display: block;
+}
+
+nav a {
+    display: block;
+    color: var(--nav-link-color);
+    padding: 0.8rem;
+    text-decoration: none;
+    text-align: right;
+}
+
+nav a.active {
+    background-color: var(--accent2-color);
+    color: var(--accent2-color-text);
+}
+
+nav a:hover {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* Main section */
+main {
+    margin: 0 auto;
+    max-width: 1350px;
+}
+
+main.homepage {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+main.homepage section {
+    background-color: var(--card-background);
+    padding: 0px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+main.homepage section h2 {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    padding: 5px;    
+}
+
+main.homepage section div.cardContent {
+    padding: 15px;
+}
+
+main.homepage section div.cardContent ul {
+    list-style-position: inside;
+    text-align: left;
+    overflow: hidden;
+    padding: 6px;
+    margin-left: 7px;
+}
+
+.buttonsDivider {
+    background-color: #e0e0e0;
+    padding: 5px;    
+}
+
+.buttonsDivider button {
+    width: 100px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    padding: 2px;
+}
+
+.buttonsDivider button:hover {
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-text);
+}
+
+#courseCards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+}
+
+.courseCard {
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.courseCard.taken {
+    border: 1px solid var(--accent1-color);
+    background-color: var(--accent1-color);
+    color: var(--accent1-color-text);
+}
+
+
+@media screen and (min-width: 640px) {
+    header h1 {
+        text-align: center;
+    }
+    
+    nav {
+        display: flex;
+    }
+
+    nav a {
+        display: flex;
+        flex: 1 1 100%;
+        justify-content: center;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #courseCards {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 350fr));
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main.homepage {
+        grid-template-columns: 6fr 4fr;
+    }
+
+    section.fullWidth {
+        grid-column: span 2;
+    }
+
+}
+
+
+@media screen and (min-width: 1150px) {
+
+}

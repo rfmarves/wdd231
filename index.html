@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WDD 231 - Web Frontend Development, René Marves, web development"
+    />
+    <meta name="author" content="René Marves" />
+    <title>René F. Marves Gómez - WDD 231</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+    <script defer async src="scripts/main.js"></script>
+    <script defer async src="scripts/courses.js"></script>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
-</head>
-
-<body>
-    <h1>WDD 131 - René</h1>
-</body>
-
+  <body>
+    <header>
+      <div class="header">
+        <img src="" alt="" />
+        <h1>René F. Marves Gómez</h1>
+        <a href="#" id="menu" aria-label="Menu icon"></a>
+      </div>
+      <nav class="navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="">Chamber</a>
+        <a class="nav-link" href="">GitHub Profile</a>
+        <a class="nav-link" href="https://www.linkedin.com/in/rfmarves/">LinkedIn</a>
+      </nav>
+    </header>
+    <main class="homepage">
+      <section class="leftBar">
+        <h2>Course Work</h2>
+        <div class="cardContent">
+            <ul id="courseWork">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>    
+        </div>
+      </section>
+      <section class="rightBar">
+        <h2>Guatemala, Guatemala</h2>
+        <div class="cardContent">
+            <img src="images/guatemala-city.jpg" alt="Image of Guatemala City" width="320" height="200"/>
+            <p>Guatemala City, Guatemala</p>
+        </div>
+      </section>
+      <section class="fullWidth">
+        <h2>Web and Computer Programming Certificate</h2>
+        <div class="buttonsDivider">
+          <button id="showAll">All</button>
+          <button id="showCse">CSE</button>
+          <button id="showWdd">WDD</button>
+          <p>Credits required: <span id="creditsRequired"></span></p>
+        </div>
+        <div id="courseCards" class="cardContent">
+            <!--div class="courseCard">Course 1</div>
+            <div class="courseCard taken">Course 2</div>
+            <div class="courseCard taken">Course 3</div>
+            <div class="courseCard">Course 4</div>
+            <div class="courseCard">Course 5</div>
+            <div class="courseCard">Course 6</div-->
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy;<span id="currentYear"></span>, René Marves, Guatemala</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
 </html>
