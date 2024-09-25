@@ -1,0 +1,72 @@
+* {
+    font-family: 'Raleway';
+}
+
+main {
+    padding: 5px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Zilla Slab';
+    color: #4d4d96;
+    margin: 0.2em;
+}
+
+.buttons {
+    text-align: center;
+    margin: 15px;
+}
+
+button {
+    border: 1px solid #4d4d96;
+    border-radius: 5px;
+    background-color: #4d4d96;
+    color: #ffffff;
+    padding: 5px;
+    min-width: 100px;
+}
+
+button:hover {
+    color: #4d4d96;
+    background-color: #4d4d963a;
+}
+
+button.selected {
+    color: #4d4d96;
+    background-color: #ffffff;
+}
+
+#cards {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: #dddddd;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 325fr));
+    row-gap: 5px;
+    column-gap: 5px;
+    padding: 20px;
+}
+
+#cards > section {
+    background-color: #b9b9cc;
+    text-align: center;
+    border: 1px solid #4d4d96;
+}
+
+#cards > section > p {
+    margin: 0;
+}
+
+#cards > section > img {
+    margin: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0;
+    background-color: #4d4d96;
+    color: #ffffff;
+}
