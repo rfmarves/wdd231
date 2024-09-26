@@ -68,30 +68,33 @@ header h1 {
     content: "≡";
 }
 
+#menu.show::before {
+    content: "x";
+}
+
 #logo-link > img {
     border-radius: 15px;
 }
 
-nav {
+nav ul {
     background-color: var(--nav-background-color);
     display: none;
 }
 
-nav.show {
+nav ul.show {
     display: block;
 }
 
-nav a {
+nav li.nav-link {
     display: block;
-    color: var(--nav-link-color);
-    padding: 0.8rem;
-    text-decoration: none;
     text-align: right;
 }
 
-nav a.active {
-    background-color: var(--accent2-color);
-    color: var(--accent2-color-text);
+nav a {
+    padding: 0.8rem;
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -102,6 +105,11 @@ nav a:hover {
 footer {
     padding: 2rem;
     text-align: center;
+}
+
+nav li.active a, nav li.active a:hover  {
+    background-color: var(--accent2-color);
+    color: var(--accent2-color-text);
 }
 
 
