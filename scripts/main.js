@@ -1,5 +1,5 @@
 // DOM elements
-const mainnav = document.querySelector(".navigation");
+const mainnav = document.querySelector("#animateme");
 const hambutton = document.querySelector("#menu");
 const currentYearElement = document.querySelector("#currentYear");
 const lastModifiedElement = document.querySelector("#lastModified");

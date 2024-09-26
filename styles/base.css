@@ -78,11 +78,14 @@ header h1 {
 
 nav ul {
     background-color: var(--nav-background-color);
-    display: none;
+    /* display: none; */
+    overflow: hidden;
 }
 
-nav ul.show {
-    display: block;
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
 }
 
 nav li.nav-link {
@@ -100,6 +103,10 @@ nav a {
 nav a:hover {
     background-color: var(--nav-hover-background-color);
     color: var(--nav-hover-link-color);
+}
+
+nav.show {
+    grid-template-rows: 1fr;
 }
 
 footer {
@@ -200,13 +207,13 @@ main.homepage section div.cardContent ul {
     }
     
     nav {
-        display: flex;
+        grid-template-rows: 1fr;
     }
 
-    nav a {
+    nav ul, nav ul.show {
         display: flex;
         flex: 1 1 100%;
-        justify-content: center;
+        justify-content: flex-end;
     }
 
     #menu {
