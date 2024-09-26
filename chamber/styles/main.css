@@ -1,0 +1,34 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #002238;  /*use  with white text*/
+    --secondary-color: #93b039; /*use  with black text*/
+    --accent1-color: #75abb0; /*use  with black text*/
+    --accent2-color:  #fcf2d9; /*use  with black text*/
+    --page-background: #fffcf5;
+    --card-background: white;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Amita";
+    --paragraph-font: "Raleway", sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --primary-color-text: white;
+    --secondary-color-text: black;
+    --accent1-color-text: black;
+    --nav-link-color: var(--primary-color-text);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--secondary-color-text);
+    --nav-hover-background-color: var(--secondary-color);
+}
+
+* {
+    font-family: var(--paragraph-font);
+}
+
+body {
+    background-color: var(--page-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
