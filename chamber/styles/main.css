@@ -42,7 +42,7 @@ body {
     background-color: var(--page-background);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .navsubtitle {
     font-family: var(--heading-font);
 }
 
@@ -138,7 +138,9 @@ nav a.active {
     border-bottom: 7px solid var(--secondary-color);
 }
 
+/******************/
 /* Footer section */
+/******************/
 
 footer {
     background-color: var(--primary-color);
