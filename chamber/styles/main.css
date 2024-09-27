@@ -19,6 +19,16 @@
     --nav-background-color: var(--primary-color);
     --nav-hover-link-color: var(--secondary-color-text);
     --nav-hover-background-color: var(--secondary-color);
+
+    /* dark mode changes */
+    --dark-primary-color: #fffcf5;
+    --dark-text-color: #fffcf5;
+    --dark-secondary-color: #93b039; /*use  with black text*/
+    --dark-accent1-color: #75abb0; /*use  with black text*/
+    --dark-accent2-color:  #fcf2d9; /*use  with black text*/
+    --dark-page-background: #222222;
+    --dark-card-background: white;
+    --dark-primary-color-text: #002238;
 }
 
 * {
@@ -200,6 +210,18 @@ footer a:hover {
 /* Main section */
 
 main {
-    margin: 0 auto;
+    padding: 0 20px;
     max-width: 1350px;
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--primary-color);
+    }
+}
+
+body.dark-mode {
+    background-color: var(--dark-page-background);
+    color: var(--dark-text-color);
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--accent1-color);
+    }
 }
