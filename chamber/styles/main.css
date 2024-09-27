@@ -23,6 +23,9 @@
 
 * {
     font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -31,4 +34,158 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
+}
+
+/*****************************/
+/*     Header formatting     */
+/*****************************/
+
+header .header-blocks {
+    background-color: var(--primary-color);
+    padding: 5px;
+    color: var(--primary-color-text);
+    display: flex;
+    align-items: center;
+}
+
+#menu, #themetoggle {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    color:  var(--primary-color-text);
+}
+
+.title-block {
+    flex: 1 1 100%;
+}
+
+#menu > #closemenuicon {
+    display: none;
+}
+
+#menu.show > #closemenuicon {
+    display: block;
+}
+
+#menu > #openmenuicon {
+    display: block;
+}
+
+#menu.show > #openmenuicon {
+    display: none;
+}
+
+nav {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+
+nav.show {
+    grid-template-rows: 1fr;
+}
+
+nav ul {
+    background-color: var(--nav-background-color);
+    color: var(--nav-link-color);
+    overflow: hidden;
+}
+
+nav li {
+    text-align: right;
+    display: block;
+}
+
+nav a {
+    color: var(--nav-link-color);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+}
+
+nav a:hover {
+    background-color: var(--accent1-color);
+    color: var(--accent1-color-text);
+}
+
+/* Footer section */
+
+footer {
+    background-color: var(--primary-color);
+    padding: 5px;
+    color: var(--primary-color-text);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+footer a {
+    color: var(--primary-color-text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent1-color);
+}
+
+.footer-card {
+    padding: 10px;
+}
+
+.footer-card.footer-icons {
+    display: flex;
+    align-self: center;
+}
+
+.footer-icons a {
+    /* Inspiration from https://codepen.io/foxeisen/pen/oZPzMQ */
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid var(--primary-color-text); 
+    font-size: 1.5em;
+    transition: color 300ms, background-color 300ms ease-in-out;
+
+    /* i {
+      position: relative;
+      z-index: 3;
+    } */
+    
+    /* &:last-child {
+      margin-right: 0px;
+    } */
+    
+    /* &:before {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    } */
+    
+    /* i {
+      display: inline-block;
+      vertical-align: middle;
+    } */
+}
+
+.footer-icons a:hover {
+    /* border: 2px dotted var(--primary-color-text); */
+    background-color: var(--primary-color-text);
+    color: var(--primary-color);
+}
+
+/* Main section */
+
+main {
+    margin: 0 auto;
+    max-width: 1350px;
 }

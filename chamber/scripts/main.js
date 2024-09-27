@@ -1,13 +1,13 @@
 // DOM elements
-// const mainnav = document.querySelector("#animateme");
-// const hambutton = document.querySelector("#menu");
+const mainnav = document.querySelector(".navigation");
+const hambutton = document.querySelector("#menu");
 const currentYearElement = document.querySelector("#currentYear");
 const lastModifiedElement = document.querySelector("#lastModified");
 
-// hambutton.addEventListener('click', () => {
-// 	mainnav.classList.toggle('show');
-// 	hambutton.classList.toggle('show');
-// });
+hambutton.addEventListener('click', () => {
+	mainnav.classList.toggle('show');
+	hambutton.classList.toggle('show');
+});
 
 // gets the date and year
 const today = new Date();
