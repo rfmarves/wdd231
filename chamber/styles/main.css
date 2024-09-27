@@ -134,6 +134,10 @@ nav a:hover {
     color: var(--accent1-color-text);
 }
 
+nav a.active {
+    border-bottom: 7px solid var(--secondary-color);
+}
+
 /* Footer section */
 
 footer {
