@@ -40,21 +40,33 @@ h1, h2, h3, h4, h5, h6 {
 /*     Header formatting     */
 /*****************************/
 
-header .header-blocks {
+header {
     background-color: var(--primary-color);
-    padding: 5px;
     color: var(--primary-color-text);
+}
+
+.header-blocks {
+    padding: 5px;
     display: flex;
     align-items: center;
 }
 
-#menu, #themetoggle {
+#menu, #themetoggle-mobile, #themetoggle-desk {
+    color: var(--primary-color-text);
     display: block;
     font-size: 2rem;
     font-weight: 700;
     text-decoration: none;
     padding: 0.5rem 0.75rem;
-    color:  var(--primary-color-text);
+}
+
+#themetoggle-desk {
+    display: none;
+}
+
+#themetoggle-desk:hover {
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
 }
 
 .title-block {
@@ -96,6 +108,7 @@ nav ul {
 nav li {
     text-align: right;
     display: block;
+    display: flex;
 }
 
 nav a {
@@ -103,6 +116,7 @@ nav a {
     display: block;
     text-decoration: none;
     padding: 0.8rem;
+    flex: 1;
 }
 
 nav a:hover {
