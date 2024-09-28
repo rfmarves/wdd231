@@ -204,13 +204,23 @@ footer a:hover {
     margin: 0 0 0 auto
 }
 
-/* Main section */
+/***************************/
+/*       Main section      */
+/***************************/
 
 main {
     padding: 0 20px;
     max-width: 1350px;
     margin: 0 auto;
 }
+
+main h1 {
+    text-align: center;
+}
+
+/***************************/
+/* Dark mode configuration */
+/***************************/
 
 main > h1,
 main > h2,

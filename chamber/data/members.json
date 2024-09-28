@@ -1,0 +1,154 @@
+{
+    "members": [
+        {
+            "name": "Shire Supplies",
+            "address": "1 Bagshot Row, Hobbiton, The Shire",
+            "phone": "+838-599-575-7200",
+            "url": "www.shiresupplies.me",
+            "image": "images/shire-supplies.webp",
+            "membership": 1,
+            "email": "inquiries@shiresupplies.me",
+            "whatsapp": "+838-823-993-3343"
+        },
+        {
+            "name": "Elven Elegance",
+            "address": "10 Lothlórien Way, Caras Galadhon, Lothlórien",
+            "phone": "+838-557-358-0583",
+            "url": "www.elvenelegance.el",
+            "image": "images/elven-elegance.webp",
+            "membership": 3,
+            "email": "requests@elvenelegance.el",
+            "whatsapp": "+838-696-816-4785"
+        },
+        {
+            "name": "Dwarven Delights",
+            "address": "5 Lonely Mountain Road, Erebor",
+            "phone": "+838-895-837-8672",
+            "url": "www.dwarvendelights.dwr",
+            "image": "images/dwarven-delights.webp",
+            "membership": 2,
+            "email": "dwarf.lord@dwarvendelights.dwr",
+            "whatsapp": "+838-119-831-9902"
+        },
+        {
+            "name": "Gondor Goods",
+            "address": "7 White Tower Street, Minas Tirith, Gondor",
+            "phone": "+838-780-210-0391",
+            "url": "www.gondorgoods.gnd",
+            "image": "images/gondor-goods.webp",
+            "membership": 3,
+            "email": "sales@gondorgoods.gnd",
+            "whatsapp": "+838-934-254-5367"
+        },
+        {
+            "name": "Rohan Rarities",
+            "address": "3 Golden Hall Lane, Edoras, Rohan",
+            "phone": "+838-234-841-6021",
+            "url": "www.rohanrarities.roh",
+            "image": "images/rohan-rarities.webp",
+            "membership": 2,
+            "email": "finds@rohanrarities.roh",
+            "whatsapp": "+838-128-704-6148"
+        },
+        {
+            "name": "Mirkwood Merchants",
+            "address": "8 Woodland Realm Avenue, Mirkwood",
+            "phone": "+838-680-161-4809",
+            "url": "www.mirkwoodmerchants.mrk",
+            "image": "images/mirkwood-merchants.webp",
+            "membership": 1,
+            "email": "info@mirkwoodmerchants.mrk",
+            "whatsapp": "+838-504-941-0536"
+        },
+        {
+            "name": "Bree Bazaar",
+            "address": "2 Prancing Pony Road, Bree",
+            "phone": "+838-602-010-3105",
+            "url": "www.breebazaar.br",
+            "image": "images/bree-bazaar.webp",
+            "membership": 1,
+            "email": "john@breebazaar.br",
+            "whatsapp": "+838-518-333-5620"
+        },
+        {
+            "name": "Isengard Imports",
+            "address": "4 Orthanc Tower, Isengard",
+            "phone": "+838-629-687-2942",
+            "url": "www.isengardimports.isg",
+            "image": "images/isengard-imports.webp",
+            "membership": 2,
+            "email": "master@isengardimports.isg",
+            "whatsapp": "+838-689-101-5214"
+        },
+        {
+            "name": "Fangorn Forest Finds",
+            "address": "6 Entwood Path, Fangorn Forest",
+            "phone": "+838-244-581-5677",
+            "url": "www.fangornforestfinds.ff",
+            "image": "images/fangorn-forest.webp",
+            "membership": 1,
+            "email": "found@fangornforestfinds.ff",
+            "whatsapp": "+838-831-547-0721"
+        },
+        {
+            "name": "Rivendell Relics",
+            "address": "9 Last Homely House Lane, Rivendell",
+            "phone": "+838-816-698-8235",
+            "url": "www.rivendellrelics.rv",
+            "image": "images/rivendell-relics.webp",
+            "membership": 3,
+            "email": "ancient@rivendellrelics.rv",
+            "whatsapp": "+838-815-389-2559"
+        },
+        {
+            "name": "Mordor Markets",
+            "address": "11 Baraddûr Boulevard, Mordor",
+            "phone": "+838-303-441-3977",
+            "url": "www.mordormarkets.mdr",
+            "image": "images/mordor-markets.webp",
+            "membership": 1,
+            "email": "gorbag@mordormarkets.mdr",
+            "whatsapp": "+838-474-846-4980"
+        },
+        {
+            "name": "Dale Delicacies",
+            "address": "12 Bard's Way, Dale",
+            "phone": "+838-924-495-7750",
+            "url": "www.daledelicacies.dl",
+            "image": "images/dale-delicacies.webp",
+            "membership": 2,
+            "email": "yum@daledelicacies.dl",
+            "whatsapp": "+838-446-039-7444"
+        },
+        {
+            "name": "Harad Handcrafts",
+            "address": "13 Serpent Road, Harad",
+            "phone": "+838-751-448-0411",
+            "url": "www.haradhandcrafts.hr",
+            "image": "images/harad-handcrafts.webp",
+            "membership": 2,
+            "email": "artisan@haradhandcrafts.hr",
+            "whatsapp": "+838-566-969-1782"
+        },
+        {
+            "name": "Umbar Uniques",
+            "address": "14 Corsair Cove, Umbar",
+            "phone": "+838-916-269-2847",
+            "url": "www.umbaruniques.um",
+            "image": "images/umbar-uniques.webp",
+            "membership": 1,
+            "email": "bespoke@umbaruniques.um",
+            "whatsapp": "+838-676-650-8889"
+        },
+        {
+            "name": "Lorien Luxuries",
+            "address": "15 Mallorn Tree Lane, Lothlórien",
+            "phone": "+838-610-490-6377",
+            "url": "www.lorienluxuries.lor",
+            "image": "images/lorien-luxuries.webp",
+            "membership": 3,
+            "email": "lux@lorienluxuries.lor",
+            "whatsapp": "+838-503-707-5967"
+        }
+    ]
+}
