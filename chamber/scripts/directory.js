@@ -30,7 +30,7 @@ const displayMembers = (members) => {
         const image = document.createElement("img");
         image.setAttribute("src", member.image);
         image.setAttribute("alt", `${member.name} company logo`);
-        image.setAttribute("loading", "lazy");
+        // image.setAttribute("loading", "lazy");
         image.setAttribute("width",   100);
         image.setAttribute("height",  100);
         card.appendChild(image);
