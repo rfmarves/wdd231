@@ -18,6 +18,7 @@ async function getMembers() {
 
 const displayMembers = (members) => {
     cardsContainer.innerHTML = "";
+    let counter = 0;
     members.forEach(member => {
         const card = document.createElement("div")
         card.classList.add("company-card");
@@ -30,7 +31,9 @@ const displayMembers = (members) => {
         const image = document.createElement("img");
         image.setAttribute("src", member.image);
         image.setAttribute("alt", `${member.name} company logo`);
-        // image.setAttribute("loading", "lazy");
+        if(counter>3) {
+            image.setAttribute("loading", "lazy");
+        }
         image.setAttribute("width",   100);
         image.setAttribute("height",  100);
         card.appendChild(image);
