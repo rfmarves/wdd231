@@ -24,10 +24,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap" rel="preload">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=close,contrast,menu" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=close,contrast,menu" rel="stylesheet" /> -->
     <script defer async src="scripts/main.js"></script>
     <script defer async src="scripts/directory.js"></script>
-    <script defer async src="https://kit.fontawesome.com/c0660a0711.js" crossorigin="anonymous"></script>
+    <!-- <script defer async src="https://kit.fontawesome.com/c0660a0711.js" crossorigin="anonymous"></script> -->
+     <link rel="stylesheet" href="styles/fontello.css">
     <link rel="stylesheet" href="styles/directory.css">
 </head>
 <body class="">
@@ -42,12 +43,15 @@
                 <h2>Middle Earth</h2>
                 <p class="navsubtitle"> Chamber of Commerce</p>
             </div>
-            <a href="#" id="themetoggle-mobile" aria-label="Dark theme toggle"><span class="material-symbols-outlined">
+            <!-- <a href="#" id="themetoggle-mobile" aria-label="Dark theme toggle"><span class="material-symbols-outlined">
                 contrast
-                </span></a>
-            <a href="#" id="menu" aria-label="Menu icon">
-                <span class="material-symbols-outlined" id="openmenuicon">menu</span>
-                <span class="material-symbols-outlined" id="closemenuicon">close</span>
+                </span></a> -->
+            <a href="#" id="themetoggle-mobile" aria-label="Dark theme toggle"><i class="demo-icon icon-adjust-1"></i> </a>
+                <a href="#" id="menu" aria-label="Menu icon">
+                <span class="demo-icon icon-menu" id="openmenuicon"></span>
+                <span class="demo-icon icon-cancel" id="closemenuicon"></span>
+                <!-- <span class="material-symbols-outlined" id="openmenuicon">menu</span>
+                <span class="material-symbols-outlined" id="closemenuicon">close</span> -->
             </a>
         </div>
         <nav class="navigation">
@@ -56,7 +60,8 @@
                 <li class="nav-item"><a href="directory.html" class="nav-link active">Directory</a></li>
                 <li class="nav-item"><a href="join.html" class="nav-link">Join</a></li>
                 <li class="nav-item"><a href="discover.html" class="nav-link">Discover</a></li>
-                <li class="nav-item"><a href="#" id="themetoggle-desk" aria-label="Dark theme toggle"><span class="material-symbols-outlined">contrast</span></a></li>
+                <li class="nav-item"><a href="#" id="themetoggle-desk" aria-label="Dark theme toggle"><span class="demo-icon icon-adjust-1"></span></a></li>
+                <!-- <li class="nav-item"><a href="#" id="themetoggle-desk" aria-label="Dark theme toggle"><span class="material-symbols-outlined">contrast</span></a></li> -->
             </ul>
         </nav>
     </header>
@@ -77,9 +82,12 @@
             <p>+838-876-897-8792</p>
         </div>
         <div class="footer-card footer-icons">
-            <a href="" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="" aria-label="YouTube"><i   class="demo-icon icon-youtube-play"></i></a>
+            <a href="" aria-label="Twitter"><i   class="demo-icon icon-twitter-1"></i></a>
+            <a href="" aria-label="Linked In"><i class="demo-icon icon-linkedin-1"></i></a>
+            <!-- <a href="" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
             <a href="" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-            <a href="" aria-label="Linked In"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="" aria-label="Linked In"><i class="fa-brands fa-linkedin-in"></i></a> -->
         </div>
         <div class="footer-card footer-credits">
                 <p>WDD231 Class Project</p>
