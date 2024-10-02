@@ -23,7 +23,12 @@
         display: flex;
         justify-content: flex-end;
     }
-    
+
+    nav a.active {
+        border-right: none;
+        border-bottom: 7px solid var(--secondary-color);
+    }
+        
     .title-block {
         min-width: 200px;
     }
@@ -31,5 +36,13 @@
     .footer-items {
         display: grid;
         grid-template-columns: 2fr 1fr 2fr;
+    }
+
+    .footer-credits {
+        margin: 0 0 0 auto
+    }
+
+    main h1 {
+        text-align: center;
     }
 }

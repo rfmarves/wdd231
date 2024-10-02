@@ -135,7 +135,7 @@ nav a:hover {
 }
 
 nav a.active {
-    border-bottom: 7px solid var(--secondary-color);
+    border-right: 7px solid var(--secondary-color);
 }
 
 /******************/
@@ -200,10 +200,6 @@ footer a:hover {
     margin: 0 auto;
 }
 
-.footer-credits {
-    margin: 0 0 0 auto
-}
-
 /***************************/
 /*       Main section      */
 /***************************/
@@ -215,7 +211,7 @@ main {
 }
 
 main h1 {
-    text-align: center;
+    text-align: left;
 }
 
 /***************************/
