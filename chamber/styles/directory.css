@@ -90,6 +90,6 @@
 }
 
 body.dark-mode .company-card {
-    background-color: #424242;
+    background-color: var(--dark-card-color);
     box-shadow: none;
 }
