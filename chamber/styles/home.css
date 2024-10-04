@@ -50,7 +50,6 @@
 .home-card > h2 {
     background-color: var(--primary-color);
     color: var(--primary-color-text);
-    /* font-family: var(--parragraph-font); */
     font-weight: 500;
     padding: 3px;
     text-align: center;
@@ -108,11 +107,6 @@
     align-items: center;
     text-align: center;
     flex: 25%;
-}
-
-.featured-member-card .logo img {
-    /* width: 100%;
-    aspect-ratio: 1/1; */
 }
 
 .featured-member-card .member-data {
