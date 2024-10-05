@@ -13,8 +13,6 @@ async function apiFetchCurrentWeather() {
         const response = await fetch(urlCurrentWeather);
         if (response.ok) {
             const data = await response.json();
-            // console.log(data);
-            // console.log(data.weather[0].description);
             displayResults(data);
         } else {
             throw Error(await response.text());
@@ -25,14 +23,12 @@ async function apiFetchCurrentWeather() {
 }
 
 const displayResults = (data) => {
-    weatherIcon.setAttribute("src", `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+    weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
     weatherIcon.setAttribute("alt", `${data.weather[0].description} weather icon`);
-    // const options = { dateStyle: 'long', timeStyle: 'long', timeZone: 'Pacific/Auckland'};
+
     const options = { timeStyle: 'short', timeZone: 'Pacific/Auckland'};
     let sunriseTime = new Date(Number(data.sys.sunrise)*1000).toLocaleString('en-NZ',options);
     let sunsetTime = new Date(Number(data.sys.sunset)*1000).toLocaleString('en-NZ',options);
-    // console.log(sunriseTime);
-    // console.log(sunsetTime);
     weatherData.innerHTML = `<p><strong>${data.main.temp}°</strong> C</p>
                         <p>High: ${data.main.temp_max}°</p>
                         <p>Low: ${data.main.temp_min}°</p>
@@ -48,8 +44,6 @@ async function apiFetchForecast() {
         const response = await fetch(urlFiveDayForecast);
         if (response.ok) {
             const data = await response.json();
-            // console.log(data);
-            // console.log(data.list);
             displayForecast(data);
         } else {
             throw Error(await response.text());
