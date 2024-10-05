@@ -126,10 +126,7 @@ const displayForecast = (data) => {
     const dataSummary = processForecastData(data);
     let counter = 0;
     weatherForecast.innerHTML = '';
-    console.log(dataSummary);
-    // console.log(dataSummary["2024-10-04"]);
     dataSummary.forEach(element => {
-        console.log(element)
         let newP = document.createElement('p');
         newP.innerHTML = `${element.day}: <strong>${element.temp.toFixed(0)} °C</strong>`;
         weatherForecast.appendChild(newP);
