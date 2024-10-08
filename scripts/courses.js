@@ -89,6 +89,8 @@ const allButton = document.querySelector("#showAll");
 const cseButton = document.querySelector("#showCse");
 const wddButton = document.querySelector("#showWdd");
 const pendingCredits = document.querySelector('#creditsRequired');
+const courseDetails = document.querySelector('#course-details');
+// const closeButton = document.querySelector('#close-button');
 
 // fill in the required credits
 let totalCredits = courses.reduce((total, course) => total + course.credits, 0);
@@ -108,8 +110,34 @@ const fillCourses = (courseList) => {
             newCourse.classList.add(takenClass);
         }
         newCourse.innerText = `${course.subject} ${course.number}`;
+        newCourse.addEventListener('click', () => {
+            displayCourseDetails(course);
+        });
         coursesContainer.appendChild(newCourse);
     });    
+}
+
+// displays the course modal
+const displayCourseDetails = (course) => {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+      <button id="close-button">❌</button>
+      <h2>${course.subject}</h2>
+      <h3>${course.title}</h3>
+      <p><strong>Credits:</strong> ${course.credits}</p>
+      <p><strong>Certificate:</strong> ${course.certificate}</p>
+      <p>${course.description}</p> 
+      <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
+    `;
+    const closeButton = document.querySelector('#close-button');
+    // closeButton.setAttribute('id', 'close-button');
+    // closeButton.innerText = '❌';
+    courseDetails.appendChild(closeButton);
+    courseDetails.showModal();
+
+    closeButton.addEventListener('click', () => {
+        courseDetails.close();
+    });
 }
 
 // filter event listeners
@@ -127,3 +155,5 @@ wddButton.addEventListener('click', () => {
 
 // initial load of all courses
 fillCourses(courses);
+
+// courseDetails.show();
