@@ -129,12 +129,9 @@ const displayCourseDetails = (course) => {
       <p>${course.description}</p> 
       <p><strong>Technology:</strong> ${course.technology.join(', ')}</p>
     `;
-    const closeButton = document.querySelector('#close-button');
-    // closeButton.setAttribute('id', 'close-button');
-    // closeButton.innerText = '❌';
-    courseDetails.appendChild(closeButton);
     courseDetails.showModal();
 
+    const closeButton = document.querySelector('#close-button');
     closeButton.addEventListener('click', () => {
         courseDetails.close();
     });
