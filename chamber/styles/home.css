@@ -117,7 +117,7 @@
 /* dark mode settings */
 /**********************/
 
-body.dark-mode .home-card,
+body.dark-ae .home-card,
 body.dark-mode .featured-member-card {
     background-color: var(--dark-card-color);
 }

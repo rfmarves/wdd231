@@ -152,5 +152,3 @@ wddButton.addEventListener('click', () => {
 
 // initial load of all courses
 fillCourses(courses);
-
-// courseDetails.show();
