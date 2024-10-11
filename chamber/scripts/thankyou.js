@@ -21,7 +21,7 @@ let formData = {};
 
 splitFormData.forEach(element => {
     const splitElement = element.split("=");
-    formData[splitElement[0]] = splitElement[1].;
+    formData[splitElement[0]] = splitElement[1];
 });
 
 console.log(formData);
