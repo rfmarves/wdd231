@@ -1,6 +1,7 @@
 main {
     display: flex;
     flex-direction: column;
+    max-width: 800px;
 }
 
 main>div {
@@ -47,8 +48,10 @@ button:hover {
 
 #goldCard:hover {
     background-color: #ffd700;
+    animation-play-state: paused;
 }
 
+#goldModal,
 #goldModal hr {
     border-color: #ffd700;
 }
@@ -57,6 +60,7 @@ button:hover {
     background-color: #c0c0c0;
 }
 
+#silverModal,
 #silverModal hr {
     border-color: #c0c0c0;
 }
@@ -65,7 +69,8 @@ button:hover {
     background-color: #CD7F32;
 }
 
-#bronzeModal {
+#bronzeModal,
+#bronzeModal hr{
     border-color: #CD7F32;
 }
 
@@ -107,4 +112,112 @@ dialog.modal hr {
     border-width: 2px;
     border-style: solid;
     border-color: #d3d3d3;
+}
+
+/* Animations  */
+.membership-card {
+    animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+.membership-card:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.membership-card:nth-child(3) {
+    animation-delay: 0.10s;
+}
+
+.membership-card:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+#goldCard {
+    animation: 1s ease-out 0s 1 slideInFromRight, 2s wiggle 8s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-10deg);
+    }
+    20% {
+      transform: rotateZ(8deg);
+    }
+    25% {
+      transform: rotateZ(-8deg);
+    }
+    30% {
+      transform: rotateZ(5deg);
+    }
+    35% {
+      transform: rotateZ(-3deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+
+/* Dark mode */
+body.dark-mode .membership-card {
+    background-color: var(--dark-card-color);
+}
+
+body.dark-mode #goldCard:hover,
+body.dark-mode #silverCard:hover,
+body.dark-mode #bronzeCard:hover,
+body.dark-mode .membership-card:hover {
+    background-color: var(--dark-card-color);
+}
+
+body.dark-mode #goldCard:hover {
+    box-shadow: 0 0 2rem #ffd700;
+}
+
+body.dark-mode #silverCard:hover {
+    box-shadow: 0 0 2rem #c0c0c0;
+}
+
+body.dark-mode #bronzeCard:hover {
+    box-shadow: 0 0 2rem  #CD7F32;
+}
+
+body.dark-mode .membership-card:hover {
+    box-shadow: 0 0 2rem #ffffff;
+}
+
+body.dark-mode dialog.modal {
+    background-color: var(--dark-page-background);
+    color: var(--dark-text-color);
+}
+
+body.dark-mode fieldset {
+    background-color: rgba(255, 255, 255, 0.07);
+}
+@media screen and (min-width: 640px) {
+    main {
+        flex-direction: row;
+    }
+
+    .form-section {
+        flex: 70%
+    }
+
+    .sidebar {
+        flex: 30%;
+        margin: 20px;
+    }
+
 }

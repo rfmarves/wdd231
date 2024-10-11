@@ -35,28 +35,34 @@
         <h2>Gold Membership</h2>
         <hr>
         <p>Get the most exposure within our organization.</p>
+        <p>Free entry to all chapter events.</p>
         <p>Be listed on our homepage.</p>
         <p>Connect with others to achieve your goals faster.</p>
         <p>Become known across all Middle Earth</p>
+        <p>25,000 yearly fee</p>
     </dialog>
     <dialog class="modal" id="silverModal">
         <h2>Silver Membership</h2>
         <hr>
         <p>Be listed on our homepage.</p>
+        <p>75% discount to all chapter events</p>
         <p>Connect with others to achieve your goals faster.</p>
         <p>Become known across all Middle Earth</p>
+        <p>18,000 yearly fee</p>
     </dialog>
     <dialog class="modal" id="bronzeModal">
         <h2>Bronze Membership</h2>
         <hr>
-        <p>Membership benefits line 1</p>
+        <p>50% discount to all chapter events</p>
         <p>Connect with others to achieve your goals faster.</p>
         <p>Become known across all Middle Earth</p>
+        <p>9,000 yearly fee</p>
     </dialog>
     <dialog class="modal" id="npModal">
         <h2>Non-Profit Membership</h2>
         <hr>
-        <p>Free membership</p>
+        <p>Free membership.</p>
+        <p>15% discount to all chapter events.</p>
         <p>Extend the reach of your organization to further your purpose.</p>
         <p>Become known across all Middle Earth</p>
     </dialog>
@@ -70,7 +76,7 @@
             </div>
             <div class="title-block">
                 <h2>Middle Earth</h2>
-                <p class="navsubtitle"> Chamber of Commerce - Home</p>
+                <p class="navsubtitle"> Chamber of Commerce - Join us</p>
             </div>
             <a href="#" id="themetoggle-mobile" aria-label="Dark theme toggle"><i class="demo-icon icon-adjust-1"></i>
             </a>
@@ -96,11 +102,11 @@
             <form action="thankyou.html" method="get">
                 <fieldset>
                     <legend>Personal Information</legend>
-                    <label for="firstName">First name: <input type="text" id="firstName" autocomplete="given-name"
+                    <label for="firstName">First name: <input type="text" name="firstName" id="firstName" autocomplete="given-name"
                             required></label>
-                    <label for="lastName">Last name: <input type="text" id="lastName" autocomplete="family-name"
+                    <label for="lastName">Last name: <input type="text" name="lastName" id="lastName" autocomplete="family-name"
                             required></label>
-                    <label for="title">Organization title: <input type="text" id="title"
+                    <label for="title">Organization title: <input type="text" name="orgTitle" id="title"
                             autocomplete="organization-title" pattern="[a-zA-Z\-\s]{7,}"></label>
                     <label for="email">Email: <input type="email" name="email" id="email" autocomplete="email" required
                             placeholder="you@example.com"></label>
@@ -113,10 +119,10 @@
                             autocomplete="organization" required></label>
                     <label for="membership">Membership level: <select name="membership" id="membership" required>
                             <option value="" selected disabled>Select a level...</option>
-                            <option value="np">Non-Profit</option>
-                            <option value="bronze">Bronze</option>
-                            <option value="silver">Silver</option>
                             <option value="gold">Gold</option>
+                            <option value="silver">Silver</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="np">Non-Profit</option>
                         </select></label>
                     <label for="orgDescription">Business/Organization Description: <textarea name="orgDescription"
                             id="orgDescription"></textarea></label>

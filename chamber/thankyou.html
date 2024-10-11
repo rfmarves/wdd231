@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Middle Earth Chamber of Commerce - Thank you</title>
+    <meta name="description" content="Member Directory for the Middle Earth Chamber of Commerce">
+    <meta name="author" content="René Marves">
+    <!--  Essential META Tags -->
+    <meta property="og:title" content="Middle Earth Chamber of Commerce - Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://rfmarves.github.io/wdd231/chamber/images/mecc-logo-500.webp">
+    <meta property="og:url" content="https://rfmarves.github.io/wdd231/chamber/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!--  Non-Essential, But Recommended -->
+    <meta property="og:description" content="Chamber of commerce assignment website.">
+    <meta property="og:site_name" content="Middle Earth Chamber of Commerce">
+    <meta name="twitter:image:alt" content="Middle Earth Chamber of Commerce logo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap">
+    <link rel="preload" as="font"
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="styles/fontello.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/common.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body class="">
+    <header>
+        <div class="header-blocks">
+            <div class="nav-logo">
+                <a href="index.html" id="logo-link">
+                    <img src="images/mecc-logo-113.webp" width="75" height="75"
+                        alt="Middle Earth Chamber of Commerce logo">
+                </a>
+            </div>
+            <div class="title-block">
+                <h2>Middle Earth</h2>
+                <p class="navsubtitle"> Chamber of Commerce - Thank you</p>
+            </div>
+            <a href="#" id="themetoggle-mobile" aria-label="Dark theme toggle"><i class="demo-icon icon-adjust-1"></i>
+            </a>
+            <a href="#" id="menu" aria-label="Menu icon">
+                <span class="demo-icon icon-menu" id="openmenuicon"></span>
+                <span class="demo-icon icon-cancel" id="closemenuicon"></span>
+            </a>
+        </div>
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="directory.html" class="nav-link">Directory</a></li>
+                <li class="nav-item"><a href="join.html" class="nav-link">Join</a></li>
+                <li class="nav-item"><a href="discover.html" class="nav-link">Discover</a></li>
+                <li class="nav-item"><a href="#" id="themetoggle-desk" aria-label="Dark theme toggle"><span
+                            class="demo-icon icon-adjust-1"></span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Thank you for joining us!</h1>
+        <div class="details-table">
+            <p>Here are your affiliation details:</p>
+            <div class="table-row">
+                <span class="col1">Membership level: </span>
+                <span class="col2" id="membership">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">First name: </span>
+                <span class="col2" id="fname">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Last name: </span>
+                <span class="col2" id="lname">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Title: </span>
+                <span class="col2" id="title">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Email: </span>
+                <span class="col2" id="email">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Phone number: </span>
+                <span class="col2" id="phone">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Business/Organization:</span>
+                <span class="col2" id="orgName">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Business Description:</span>
+                <span class="col2" id="orgDescription">Placeholder</span>
+            </div>
+            <div class="table-row">
+                <span class="col1">Date:</span>
+                <span class="col2" id="timestamp">Placeholder</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-items">
+            <div class="footer-card footer-address">
+                <p>Middle Earth chamber of commerce</p>
+                <p>1 White Tower Road</p>
+                <p>Minas Tirith, Gondor, Middle Earth</p>
+                <p>info@middleearthchamber.com</p>
+                <p>+838-876-897-8792</p>
+            </div>
+            <div class="footer-card footer-icons">
+                <a href="" aria-label="YouTube"><i class="demo-icon icon-youtube-play"></i></a>
+                <a href="" aria-label="Twitter"><i class="demo-icon icon-twitter-1"></i></a>
+                <a href="" aria-label="Linked In"><i class="demo-icon icon-linkedin-1"></i></a>
+            </div>
+            <div class="footer-card footer-credits">
+                <p>WDD231 Class Project</p>
+                <p>René Marves</p>
+                <p>&copy;<span id="currentYear"></span> Middle Earth Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </div>
+    </footer>
+    <script defer async src="scripts/main.js"></script>
+    <script defer async src="scripts/thankyou.js"></script>
+</body>
+
+</html>

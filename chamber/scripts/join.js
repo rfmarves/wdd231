@@ -7,6 +7,7 @@ const goldModal = document.querySelector("#goldModal");
 const silverModal = document.querySelector("#silverModal");
 const bronzeModal = document.querySelector("#bronzeModal");
 const npModal = document.querySelector("#npModal");
+const timestamp = document.querySelector("#timestamp");
 
 // Event listeners
 goldCard.addEventListener("click", () => {
@@ -40,3 +41,18 @@ bronzeModal.addEventListener("click", () => {
 npModal.addEventListener("click", () => {
   npModal.close();
 });
+
+function getDate()
+{
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1;
+    var yyyy = today.getFullYear();
+    if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
+    today = yyyy+""+mm+""+dd;
+
+    document.getElementById("timestamp").value = today;
+}
+
+//call getDate() when loading the page
+getDate();
