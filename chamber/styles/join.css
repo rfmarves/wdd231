@@ -150,19 +150,19 @@ dialog.modal hr {
       transform: rotateZ(0);
     }
     15% {
-      transform: rotateZ(-10deg);
+      transform: rotateZ(-5deg);
     }
     20% {
-      transform: rotateZ(8deg);
+      transform: rotateZ(4deg);
     }
     25% {
-      transform: rotateZ(-8deg);
+      transform: rotateZ(-4deg);
     }
     30% {
-      transform: rotateZ(5deg);
+      transform: rotateZ(2.5deg);
     }
     35% {
-      transform: rotateZ(-3deg);
+      transform: rotateZ(-1.5deg);
     }
     40%, 100% {
       transform: rotateZ(0);
