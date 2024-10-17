@@ -1,0 +1,49 @@
+:root {
+    /* change the values below to your colors from your palette */
+    --primary-color: #0BB3CE; /*use  with black text*/
+    --secondary-color: #B30033;  /*use  with white text*/
+    --accent1-color: #FF6512; /*use  with black text*/
+    --accent2-color: #00AB6F; /*use  with black text*/
+    --accent3-color: #97BC00; /*use  with black text*/
+    --page-background: #fafafa;
+    --card-background: white;
+  
+    /* change the values below to your chosen font(s) */
+    --heading-font: "Zilla Slab";
+    --paragraph-font: "Raleway", sans-serif;
+  
+    /* these colors below should be chosen from among your palette colors above */
+    --primary-color-text: black;
+    --secondary-color-text: white;
+    --accent1-color-text: black;
+    --accent2-color-text: black;
+    --accent3-color-text: black;
+    --nav-link-color: var(--primary-color-text);
+    --nav-background-color: var(--primary-color);
+    --nav-hover-link-color: var(--secondary-color-text);
+    --nav-hover-background-color: var(--secondary-color);
+    --headline-color-on-white: var(--secondary-color);
+    --paragraph-background-color: var(--secondary-color);
+    --headline-color-on-color: var(--secondary-color-text);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    background-color: var(--page-background);
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+}
+
+header,
+footer {
+    color: var(--primary-color-text);
+    background-color: var(--primary-color);
+}
