@@ -45,4 +45,16 @@
     main h1 {
         text-align: center;
     }
+
+    .main-left-sidebar {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .vertical-image-gallery img:hover {
+        box-shadow: 0 4px 8px 0 #00000080;
+    }
+
+    body.dark-mode .vertical-image-gallery img:hover {
+        box-shadow: 0 4px 8px 0 #FFFFFF80;
+    }
 }
