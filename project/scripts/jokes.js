@@ -2,6 +2,7 @@ const jokeOutput = document.querySelector('#joke-output');
 const slider = document.querySelector('#joke-count-input');
 const displayNumberTxt = document.querySelector('#joke-count-number');
 const displayButton = document.querySelector('#display-jokes');
+const loader = document.querySelector('#loader');
 
 const url = 'https://dad-jokes-by-api-ninjas.p.rapidapi.com/v1/dadjokes';
 const options = {
@@ -27,12 +28,10 @@ async function getJoke() {
 jokeList = [];
 
 async function getJokes(count) {
-    console.log(count);
+    loader.showModal();
     for (let index = 0; index < count; index++) {
         newJoke = await getJoke();
         jokeList[index] = newJoke;
-        // console.log(jokeList);
-        // console.log(newJoke);
     }
     jokeOutput.innerHTML = '';
     jokeList.forEach(joke => {
@@ -41,6 +40,7 @@ async function getJokes(count) {
         newP.textContent = joke;
         jokeOutput.appendChild(newP);
     });
+    loader.close();
 }
 
 // Updates slider value
@@ -54,3 +54,4 @@ displayButton.addEventListener('click', () => {
 })
 
 getJokes(parseInt(slider.value));
+// loader.showModal();
