@@ -38,6 +38,14 @@ body {
     background-color: var(--page-background);
 }
 
+form,
+label,
+input,
+button {
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -45,12 +53,13 @@ h3,
     font-family: var(--heading-font);
 }
 
-/* header,
-footer {
-    color: var(--primary-color-text);
-    background-color: var(--primary-color);
+main {
+    padding: 0 1.25rem;
+    max-width: 84rem;
+    margin: 0 auto;
 }
-*/ .logo-bar {
+
+.logo-bar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -76,9 +85,9 @@ footer {
 
 .menu-bar {
     height: 0.25rem;
-    width: 4rem;
+    width: 3rem;
     display: block;
-    margin: 0.75rem auto;
+    margin: 0.5rem auto;
     position: relative;
     background-color: var(--primary-color);
     border-radius: 0.625rem;
@@ -86,7 +95,7 @@ footer {
 }
 
 .menu-icon.open>.menu-bar:nth-child(1) {
-    transform: translateY(1rem) rotate(45deg);
+    transform: translateY(.75rem) rotate(45deg);
 }
 
 .menu-icon.open>.menu-bar:nth-child(2) {
@@ -94,7 +103,7 @@ footer {
 }
 
 .menu-icon.open>.menu-bar:nth-child(3) {
-    transform: translateY(-1rem) rotate(-45deg);
+    transform: translateY(-0.75rem) rotate(-45deg);
 }
 
 nav {
@@ -132,11 +141,104 @@ nav a {
 nav a:hover {
     background-color: var(--secondary-color);
     color: var(--secondary-color-text);
+    font-weight: 600;
 }
 
 nav a.active {
     border-right: 0.5rem solid var(--secondary-color);
 }
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--primary-color-text);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+footer a {
+    color: var(--primary-color-text);
+}
+
+.control-bar {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.slider {
+    appearance: none;
+    height: 1rem; /* Specified height */
+    border-radius: 0.5rem;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.5rem; /* Set a specific slider handle width */
+    height: 1.5rem; /* Slider handle height */
+    border-radius: 50%;
+    background: var(--accent1-color); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider:hover {
+opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider-number {
+    display: inline-block;
+    width: 2rem;
+    text-align: left;
+}
+
+button {
+    border-radius: 0.3rem;
+    border: none;
+    background-color: var(--accent1-color);
+    padding: 0.5rem;
+    color: var(--accent1-color-text);
+    cursor: pointer;
+    opacity:0.8;
+    margin-top: 0.75rem;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.card-grid {
+    margin: 0.75rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(12em, 100%), 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(275px, 325fr)); */
+    row-gap: 0.75rem;
+    column-gap: 0.75rem;
+    padding: 1.25rem;
+    /* text-align: center; */
+}
+
+.card {
+    border: 0.05rem solid black ;
+    border-radius: 0.65rem;
+    padding: 1rem;
+    box-shadow: 0 0.25rem 0.3rem 0 #00000080;
+    text-align: center;
+    background-color: white;
+}
+
+
 
 /* 640px media query  */
 @media screen and (min-width: 40rem) {
@@ -156,6 +258,11 @@ nav a.active {
     nav ul.open {
         display: flex;
         justify-content: space-around;
+    }
+
+    nav li {
+        text-align: center;
+        width: 20%;
     }
 
     nav a.active {
