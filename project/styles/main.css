@@ -2,8 +2,13 @@
     /* change the values below to your colors from your palette */
     --primary-color: #B30033; /*use  with white text*/
     --secondary-color: #FF6512;  /*use  with black text*/
-    --accent1-color: #00AB6F; /*use  with black text*/
+    --accent1-color: #00ab6f; /*use  with black text*/
     --accent2-color: #97BC00; /*use  with black text*/
+    
+    --primary-color-alpha: #B3003380; /*use  with white text*/
+    --secondary-color-alpha: #FF651280;  /*use  with black text*/
+    --accent1-color-alpha: #00ab6f80; /*use  with black text*/
+    --accent2-color-alpha: #97BC0080; /*use  with black text*/
     /* --accent3-color: ; use  with black text */
     --page-background: #fafafa;
     --card-background: white;
@@ -246,13 +251,16 @@ button:hover {
     margin: 0.75rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(12em, 100%), 1fr));
-    /* grid-template-columns: repeat(auto-fit, minmax(275px, 325fr)); */
     row-gap: 0.75rem;
     column-gap: 0.75rem;
     padding: 1.25rem;
-    /* text-align: center; */
 }
 
+.card-grid.medium {
+    grid-template-columns: repeat(auto-fit, minmax(min(18em, 100%), 1fr));
+}
+
+.card-clickable,
 .card {
     border: 0.05rem solid black ;
     border-radius: 0.65rem;
@@ -260,6 +268,14 @@ button:hover {
     box-shadow: 0 0.25rem 0.3rem 0 #00000080;
     text-align: center;
     background-color: white;
+}
+
+.card-clickable {
+    cursor: pointer;
+}
+
+.card-clickable:hover {
+    box-shadow: 0 0.25rem 0.3rem 0 var(--secondary-color-alpha);
 }
 
    /******************************/
@@ -290,7 +306,7 @@ button:hover {
 }
 
 .modal iframe {
-    border: none;
+    border: 0.06rem solid var(--card-border);
     position:absolute;
     top: 0;
     left: 0;

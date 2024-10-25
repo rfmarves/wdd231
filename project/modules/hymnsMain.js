@@ -5,7 +5,7 @@ import { HymnList } from './hymnList.mjs';
 // DOM identifiers
 const modalId = "hymn-details-modal";
 const containerId = "hymn-block";
-const cardClass = "card";
+const cardClass = "card-clickable";
 const hymnTypeSelector = 'input[name="hymn-type"]:checked';
 
 // Create HymnList object
