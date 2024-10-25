@@ -29,7 +29,10 @@
     --headline-color-on-color: var(--primary-color-text);
 }
 
-* {
+  /******************/
+ /* General styles */
+/******************/
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,6 +64,9 @@ main {
     margin: 0 auto;
 }
 
+  /*************************/
+ /* Header and navigation */
+/*************************/
 .logo-bar {
     display: flex;
     flex-direction: row;
@@ -150,6 +156,10 @@ nav a.active {
     border-right: 0.5rem solid var(--secondary-color);
 }
 
+  /*****************/
+ /* Footer styles */
+/*****************/
+
 footer {
     background-color: var(--primary-color);
     color: var(--primary-color-text);
@@ -165,6 +175,10 @@ footer a {
     margin: 1rem auto;
     text-align: center;
 }
+
+  /******************/
+ /* Slider formats */
+/******************/
 
 /* CSS slider examples: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
 
@@ -207,6 +221,9 @@ opacity: 1;
     text-align: left;
 }
 
+  /*****************/
+ /* Button styles */
+/*****************/
 button {
     border-radius: 0.3rem;
     border: none;
@@ -222,6 +239,9 @@ button:hover {
     opacity: 1;
 }
 
+  /********************/
+ /* Main grid styles */
+/********************/
 .card-grid {
     margin: 0.75rem auto;
     display: grid;
@@ -241,6 +261,58 @@ button:hover {
     text-align: center;
     background-color: white;
 }
+
+   /******************************/
+  /* Dialog modal configuration */
+ /******************************/
+ .modal {
+    border: 0.06rem solid var(--card-border);
+    border-radius: 1rem;
+    margin: auto;
+    position: fixed;
+    align-self: center;
+    padding: 1.5rem;
+    width: 75%;
+}
+
+.modal-title-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.modal .iframe-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.modal iframe {
+    border: none;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-title-row h2 {
+    margin-left: 1rem;
+}
+
+.modal::backdrop {
+      background-color: rgb(0, 0, 0, .5);
+}
+
+.modal-close-button {
+    background-color: var(--card-background);
+}
+
+  /**********************/
+ /* Loading animations */
+/**********************/
 
 /* CSS Loading animations: https://dev.to/webdeasy/25-awesome-loading-animations-where-you-like-to-wait-1b5f */
 
@@ -269,8 +341,10 @@ button:hover {
   100% { transform: rotate(360deg); }
 }
 
-/* Toggle switch formatting */
-.toggle {
+   /****************************/
+  /* Toggle switch formatting */
+ /****************************/
+   .toggle {
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
@@ -319,52 +393,9 @@ button:hover {
     outline-offset: 0.45rem;
 }
 
-.modal {
-    border: 0.06rem solid var(--card-border); /* Light grey */
-    border-radius: 1rem;
-    margin: auto;
-    position: fixed;
-    align-self: center;
-    padding: 1.5rem;
-    width: 75%;
-}
-
-.modal-title-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-}
-
-.modal .iframe-wrapper {
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%;
-}
-
-.modal iframe {
-    border: none;
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.modal-title-row h2 {
-    margin-left: 1rem;
-}
-
-.modal::backdrop {
-      background-color: rgb(0, 0, 0, .5);
-}
-
-.modal-close-button {
-    background-color: var(--card-background);
-}
-
-/* 640px media query  */
+  /**********************/
+ /* 640px media query  */
+/**********************/
 @media screen and (min-width: 40rem) {
     .menu-icon {
         display: none;
