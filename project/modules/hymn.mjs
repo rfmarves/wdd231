@@ -40,7 +40,7 @@ class Hymn {
         modalContainer.innerHTML = `
             <div class="modal-title-row">
                 <h2>${this.displayName}</h2>
-                <button id="close-button" class="modal-close-button">❌</button>    
+                <button id="close-button" class="modal-close-button">❌</button>
             </div>
             <div class="iframe-wrapper">
                 <iframe src="https://www.youtube.com/embed/${code}" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

@@ -17,7 +17,7 @@ async function getJoke() {
     try {
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result[0].joke);
+        // console.log(result[0].joke);
         return result[0].joke;
 } catch (error) {
     console.error(error);
@@ -30,7 +30,7 @@ jokeList = [];
 async function getJokes(count) {
     loader.showModal();
     for (let index = 0; index < count; index++) {
-        newJoke = await getJoke();
+        let newJoke = await getJoke();
         jokeList[index] = newJoke;
     }
     jokeOutput.innerHTML = '';

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FHE.support</title>
+    <title>FHE.support - Games</title>
 
     <meta name="description" content="Family Home Evening support resources for all">
     <meta name="author" content="René Marves">
@@ -49,19 +49,43 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="karaoke.html">Hymn Karaoke</a></li>
                 <li><a href="jokes.html">Jokes</a></li>
-                <li><a href="games.html" class="active">Games</a></li>
+                <li><a href="recipes.html" class="active">Recipes</a></li>
                 <li><a href="ideas.html">Lesson ideas</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        main section
+        <div class="page-heading">
+            <h1>Recipes</h1>
+            <p>Add some tasty treats to your family home evening with these recipes 30 minutes or under from Tasty.co</p>    
+            <p>Use the search form to find the best recipe for your Family Home Evening, or just leave it blank to get the latest quick recipes.</p>
+        </div>
+        <div class="control-bar">
+            <form class="form-grid">
+                <label for="size">Amount of recipes: </label>
+                <input title="size" type="number" name="size" id="list-size" value="20" min="1" max="50" required>
+                <label for="q">Search terms:</label>
+                <input title="q" type="text" name="q" id="list-search" placeholder="optional">
+                <button type="button" id="find-recipes">Find recipes</button>
+            </form>
+        </div>
+        <dialog class="loader" id="loader"></dialog>
+        <dialog id="recipe-details-modal" class="modal">
+            <div class="modal-title-row">
+                <h2>Avocado Chicken Salad</h2>
+                <button id="close-button" class="modal-close-button">❌</button>
+            </div>
+            <video alt="original_video_url" src="https://s3.amazonaws.com/video-api-prod/assets/a0e1b07dc71c4ac6b378f24493ae2d85/FixedFBFinal.mp4" controls></video>
+        </dialog>
+        <div id="recipe-container" class="card-grid medium">
+            <p class="page-heading">Fill the form above or just click on the "Find Recipes" button to load options.</p>
+        </div>
     </main>
     <footer>
         <p>&copy;<span id="year"></span>, FHE.support</p>
-        <p><a href="site-plan.html">Site Plan</a></p>
+        <p><a href="site-plan.html">Site Plan</a> | <a href="attributions.html">Attributions</a> </p>
     </footer>
 </body>
 <script src="scripts/common.js" defer></script>
-
+<script src="scripts/recipes.js"></script>
 </html>

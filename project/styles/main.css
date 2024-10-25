@@ -63,6 +63,20 @@ h3,
     font-family: var(--heading-font);
 }
 
+h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ol {
+    margin-left: 1.5rem;
+}
+
 main {
     padding: 0 1.25rem;
     max-width: 84rem;
@@ -176,9 +190,41 @@ footer a {
     color: var(--primary-color-text);
 }
 
+  /**********************/
+ /* Control bar styles */
+/**********************/
+
+.page-heading {
+    max-width: 50rem;
+    margin: auto;
+}
+
+.page-heading h1 {
+    text-align: center;
+}
+
 .control-bar {
     margin: 1rem auto;
     text-align: center;
+    max-width: 50rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 30rem;
+    row-gap: 0.5rem;
+    margin: auto;
+}
+
+.form-grid label {
+    text-align: right;
+    margin-right: 0.5rem;
+}
+
+.form-grid button {
+    margin: 0;
+    grid-column: span 2;
 }
 
   /******************/
@@ -278,6 +324,12 @@ button:hover {
     box-shadow: 0 0.25rem 0.3rem 0 var(--secondary-color-alpha);
 }
 
+.card-clickable .image-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+}
+
    /******************************/
   /* Dialog modal configuration */
  /******************************/
@@ -326,6 +378,10 @@ button:hover {
     background-color: var(--card-background);
 }
 
+.modal video {
+    width: 100%;
+}
+
   /**********************/
  /* Loading animations */
 /**********************/
@@ -360,7 +416,9 @@ button:hover {
    /****************************/
   /* Toggle switch formatting */
  /****************************/
-   .toggle {
+
+ /* CSS radio buttons: https://freefrontend.com/css-radio-buttons/#google_vignette */
+ .toggle {
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
