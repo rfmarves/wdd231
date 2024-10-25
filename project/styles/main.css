@@ -170,35 +170,35 @@ footer a {
 
 .slider {
     appearance: none;
-    height: 1rem; /* Specified height */
+    height: 1rem;
     border-radius: 0.5rem;
-    background: var(--card-border); /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    background: var(--card-border);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
     transition: opacity .2s;
   }
 
 .slider::-webkit-slider-thumb {
     appearance: none;
-    width: 1.5rem; /* Set a specific slider handle width */
-    height: 1.5rem; /* Slider handle height */
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
-    background: var(--accent1-color); /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    background: var(--accent1-color);
+    cursor: pointer;
 }
 
 .slider:hover {
-opacity: 1; /* Fully shown on mouse-over */
+opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none;
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
-    background: var(--accent1-color); /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    width: 25px;
+    height: 25px;
+    background: var(--accent1-color);
+    cursor: pointer;
 }
 
 .slider-number {
@@ -271,10 +271,7 @@ button:hover {
 
 /* Toggle switch formatting */
 .toggle {
-    /* max-width: 40rem; */
-    /* margin: 0 0 1.5rem; */
     box-sizing: border-box;
-    /* font-size: 0; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -283,33 +280,17 @@ button:hover {
 
 .toggle input {
     width: 0;
-    /* height: 0; */
-    /* position: absolute; */
-    /* left: -9999px; */
 }
 
 .toggle input + label {
     cursor: pointer;
     flex: auto;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-  /* margin: 0; */
     padding: 0.75rem 2rem;
-    /* box-sizing: border-box; */
-    /* position: relative; */
-    /* display: inline-block; */
     border: solid 1px var(--card-border);
     background-color: var(--card-background);
-    /* font-size: 1rem; */
     line-height: 140%;
     font-weight: 600;
-    /* text-align: center; */
-    /* box-shadow: 0 0 0 rgba(255, 255, 255, 0); */
     transition: border-color 0.15s ease-out, color 0.25s ease-out, background-color 0.15s ease-out, box-shadow 0.15s ease-out;
-    /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
-    /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
-    /* ----- */
 }
 
 .toggle input + label:first-of-type {
@@ -329,7 +310,6 @@ button:hover {
 .toggle input:checked + label {
     background-color: var(--accent1-color);
     color: var(--accent1-color-text);
-    /* box-shadow: 0 0 10px #66b3fb80; */
     border-color: var(--accent1-color);
     z-index: 1;
 }
@@ -338,17 +318,6 @@ button:hover {
     outline: dotted 0.0625rem var(--card-border);
     outline-offset: 0.45rem;
 }
-
-/* @media (max-width: 800px) {
-    .toggle input + label {
-      padding: 0.75rem 0.25rem;
-      flex: 0 0 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-} */
-
 
 /* 640px media query  */
 @media screen and (min-width: 40rem) {
@@ -361,7 +330,6 @@ button:hover {
         flex: 1 1 100%;
         transition: none;
         border: none;
-        /* margin: auto; */
     }
 
     nav ul,
