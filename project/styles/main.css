@@ -7,6 +7,8 @@
     /* --accent3-color: ; use  with black text */
     --page-background: #fafafa;
     --card-background: white;
+    --card-border: #d3d3d3;
+    --card-border-hover: #213140;
   
     /* change the values below to your chosen font(s) */
     --heading-font: "Zilla Slab";
@@ -164,11 +166,13 @@ footer a {
     text-align: center;
 }
 
+/* CSS slider examples: https://www.w3schools.com/howto/howto_js_rangeslider.asp */
+
 .slider {
     appearance: none;
     height: 1rem; /* Specified height */
     border-radius: 0.5rem;
-    background: #d3d3d3; /* Grey background */
+    background: var(--card-border); /* Grey background */
     outline: none; /* Remove outline */
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
@@ -193,7 +197,7 @@ opacity: 1; /* Fully shown on mouse-over */
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #04AA6D; /* Green background */
+    background: var(--accent1-color); /* Green background */
     cursor: pointer; /* Cursor on hover */
 }
 
@@ -210,7 +214,7 @@ button {
     padding: 0.5rem;
     color: var(--accent1-color-text);
     cursor: pointer;
-    opacity:0.8;
+    opacity:0.9;
     margin-top: 0.75rem;
 }
 
@@ -238,6 +242,8 @@ button:hover {
     background-color: white;
 }
 
+/* CSS Loading animations: https://dev.to/webdeasy/25-awesome-loading-animations-where-you-like-to-wait-1b5f */
+
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
   border-top: 16px solid var(--primary-color);
@@ -262,6 +268,86 @@ button:hover {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+/* Toggle switch formatting */
+.toggle {
+    /* max-width: 40rem; */
+    /* margin: 0 0 1.5rem; */
+    box-sizing: border-box;
+    /* font-size: 0; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.toggle input {
+    width: 0;
+    /* height: 0; */
+    /* position: absolute; */
+    /* left: -9999px; */
+}
+
+.toggle input + label {
+    cursor: pointer;
+    flex: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+  /* margin: 0; */
+    padding: 0.75rem 2rem;
+    /* box-sizing: border-box; */
+    /* position: relative; */
+    /* display: inline-block; */
+    border: solid 1px var(--card-border);
+    background-color: var(--card-background);
+    /* font-size: 1rem; */
+    line-height: 140%;
+    font-weight: 600;
+    /* text-align: center; */
+    /* box-shadow: 0 0 0 rgba(255, 255, 255, 0); */
+    transition: border-color 0.15s ease-out, color 0.25s ease-out, background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+    /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+    /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+    /* ----- */
+}
+
+.toggle input + label:first-of-type {
+    border-radius: 0.4rem 0 0 0.4rem;
+    border-right: none;
+}
+
+.toggle input + label:last-of-type {
+    border-radius: 0 0.4rem 0.4rem 0;
+    border-left: none;
+}
+
+.toggle input:hover + label {
+    border-color: var(--card-border-hover);
+}
+
+.toggle input:checked + label {
+    background-color: var(--accent1-color);
+    color: var(--accent1-color-text);
+    /* box-shadow: 0 0 10px #66b3fb80; */
+    border-color: var(--accent1-color);
+    z-index: 1;
+}
+
+.toggle input:focus + label {
+    outline: dotted 0.0625rem var(--card-border);
+    outline-offset: 0.45rem;
+}
+
+/* @media (max-width: 800px) {
+    .toggle input + label {
+      padding: 0.75rem 0.25rem;
+      flex: 0 0 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+} */
 
 
 /* 640px media query  */
