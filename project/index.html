@@ -54,10 +54,51 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <dialog id="hymn-details-modal" class="modal"></dialog>
+    <dialog id="hymn-details-modal" class="modal"></dialog>
+    <dialog class="loader" id="loader"></dialog>
+    <main class="sidebar-grid">
+        <div class="page-heading">
+            <h1>Family Home Evening Support page</h1>
+            <h2>Your help for easy and fun Family Home Evenings</h2>
+        </div>
+        <div class="sidebar">
+            <h2>Welcome!</h2>
+            <p>This site is here to help you plan your family home evening.</p>
+            <p>Use this page to write up your agenda. You can print your agenda and save the latest one too!</p>
+            <p>Use the Hymn Karaoke page to have videos of all hymns (currently only from the Spanish hymnbook).</p>
+            <p>Use the Jokes pages for a near-endless supply of fun dad jokes.</p>
+            <p>Use the Recipes page to get inspiration for recipes to make your evening tastier.</p>
+            <p>Use the lesson ideas tab for inspiration on topics to cover.</p>
+        </div>
+        <div class="agenda grid-main">
+            <h2>Your Family Home Evening Agenda</h2>
+            <form id="agenda-form" class="form-grid">
+                <label for="family-name">Family name:</label>
+                <input type="text" name="family-name" id="family-name" title="family-name">
+                <label for="first-hymn">First hymn:</label>
+                <input type="text" name="first-hymn" id="first-hymn" title="first-hymn">
+                <label for="first-prayer">First prayer:</label>
+                <input type="text" name="first-prayer" id="first-prayer" title="first-prayer">
+                <label for="message-assignment">Message assignment:</label>
+                <input type="text" name="message-assignment" id="message-assignment" title="message-assignment">
+                <label for="message-topic">Message topic:</label>
+                <input type="text" name="message-topic" id="message-topic" title="message-topic">
+                <label for="game-assignment">Game assignment:</label>
+                <input type="text" name="game-assignment" id="game-assignment" title="game-assignment">
+                <label for="final-hymn">Final hymn:</label>
+                <input type="text" name="final-hymn" id="final-hymn" title="final-hymn">
+                <label for="final-prayer">Final prayer:</label>
+                <input type="text" name="final-prayer" id="final-prayer" title="final-prayer">
+                <label for="treat-assignment">Treat assignment:</label>
+                <input type="text" name="treat-assignment" id="treat-assignment" title="treat-assignment">
+                <label for="treat-recipe">Treat recipe:</label>
+                <input type="text" name="treat-recipe" id="treat-recipe" title="treat-recipe">
+                <div class="button-container"><button id="save-button">Save</button></div>
+                <div class="button-container"><button id="print-button">Save + Print</button></div>
+            </form>
+        <!-- </div>
         Add agenda that can be saved and retreived, with link to hymns.
-        Make hymn cards clickable to add to agenda from karaoke sheet (save video code).
+        Make hymn cards clickable to add to agenda from karaoke sheet (save video code). -->
     </main>
     <footer>
         <p>&copy;<span id="year"></span>, FHE.support</p>
@@ -65,5 +106,5 @@
     </footer>
 </body>
 <script src="scripts/common.js" defer></script>
-
+<script src="scripts/agenda.js" defer></script>
 </html>
