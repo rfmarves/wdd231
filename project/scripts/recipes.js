@@ -75,4 +75,4 @@ displayButton.addEventListener('click', () => {
     displayRecipes(parseInt(recipeQty.value), searchTerms.value);
 });
 
-// displayRecipes(6,'');
+displayRecipes(6,'');
