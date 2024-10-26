@@ -2,17 +2,13 @@ const recipesOutput = document.querySelector("#recipe-container");
 const displayButton = document.querySelector("#find-recipes");
 const loader = document.querySelector('#loader');
 const recipeDetails = document.querySelector('#recipe-details-modal');
-const recipeQty = document.querySelector("#list-size").value;
-const searchTerms = document.querySelector("#list-search").value;
-
-// console.log(recipeQty);
-// console.log(searchTerms);
-
+const recipeQty = document.querySelector("#list-size");
+const searchTerms = document.querySelector("#list-search");
 
 // API configuration segment
 const url = (recipeQty,searchTerms) => {
     if(searchTerms.length > 0) {
-        return `'https://tasty.p.rapidapi.com/recipes/list?from=0&size=${recipeQty}&tags=under_30_minutes&q=${searchTerms}'`;
+        return `https://tasty.p.rapidapi.com/recipes/list?from=0&size=${recipeQty}&tags=under_30_minutes&q=${searchTerms}`;
     } else {
         return `https://tasty.p.rapidapi.com/recipes/list?from=0&size=${recipeQty}&tags=under_30_minutes`;
     }
@@ -30,14 +26,13 @@ async function fetchRecipes(recipeQty,searchTerms) {
   try {
     const response = await fetch(url(recipeQty,searchTerms), options);
     const result = await response.json();
-    // console.log(result.results);
     return result.results;
   } catch (error) {
     console.error(error);
   }
 }
 
-// Modal creation fuction
+// Modal creation function
 const displayRecipeDetails = (recipe) => {
     recipeDetails.innerHTML = '';
     recipeDetails.innerHTML = `
@@ -65,8 +60,8 @@ async function displayRecipes(recipeQty,searchTerms) {
         newDiv.classList.add('card-clickable');
         newDiv.innerHTML = `
         <h2>${recipe.name}</h2>
-        <div class='image-container'><img alt="${recipe.thumbnail_alt_text}" src="${recipe.thumbnail_url}?resize=300:*&output-format=jpg&output-quality=auto" loading="lazy"></div>
-        <p>Preparation time: ${recipe.total_time_minutes} minutes</p>`;
+        <p>Preparation time: ${recipe.total_time_minutes} minutes</p>
+        <div class='image-container'><img alt="${recipe.thumbnail_alt_text}" src="${recipe.thumbnail_url}?resize=300:*&output-format=jpg&output-quality=auto" max-width="300" max-height="300" loading="lazy"></div>`;
         newDiv.addEventListener('click', () => {
             displayRecipeDetails(recipe);
         });
@@ -79,5 +74,5 @@ async function displayRecipes(recipeQty,searchTerms) {
 
 // General event Listeners
 displayButton.addEventListener('click', () => {
-    displayRecipes(recipeQty, searchTerms);
+    displayRecipes(parseInt(recipeQty.value), searchTerms.value);
 });

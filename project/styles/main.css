@@ -330,6 +330,12 @@ button:hover {
     padding-top: 0;
 }
 
+.card img,
+.card-clickable img {
+    width: 100%;
+    height: 100%;
+} 
+
    /******************************/
   /* Dialog modal configuration */
  /******************************/
