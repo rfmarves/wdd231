@@ -50,12 +50,9 @@
                 <li><a href="karaoke.html">Hymn Karaoke</a></li>
                 <li><a href="jokes.html">Jokes</a></li>
                 <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="ideas.html">Lesson ideas</a></li>
             </ul>
         </nav>
     </header>
-    <dialog id="hymn-details-modal" class="modal"></dialog>
-    <dialog class="loader" id="loader"></dialog>
     <main class="sidebar-grid">
         <div class="page-heading">
             <h1>Family Home Evening Support page</h1>
@@ -72,7 +69,7 @@
         </div>
         <div class="agenda grid-main">
             <h2>Your Family Home Evening Agenda</h2>
-            <form id="agenda-form" class="form-grid">
+            <form id="agenda-form" class="form-grid" action="javascript:void(0);">
                 <label for="family-name">Family name:</label>
                 <input type="text" name="family-name" id="family-name" title="family-name">
                 <label for="first-hymn">First hymn:</label>
@@ -93,12 +90,13 @@
                 <input type="text" name="treat-assignment" id="treat-assignment" title="treat-assignment">
                 <label for="treat-recipe">Treat recipe:</label>
                 <input type="text" name="treat-recipe" id="treat-recipe" title="treat-recipe">
-                <div class="button-container"><button id="save-button">Save</button></div>
-                <div class="button-container"><button id="print-button">Save + Print</button></div>
+                <div class="three-button-container">
+                    <button id="save-button">Save</button>
+                    <button id="print-button">Save + Print</button>
+                    <button id="delete-button">Delete data</button>
+                </div>
             </form>
-        <!-- </div>
-        Add agenda that can be saved and retreived, with link to hymns.
-        Make hymn cards clickable to add to agenda from karaoke sheet (save video code). -->
+        </div>
     </main>
     <footer>
         <p>&copy;<span id="year"></span>, FHE.support</p>
@@ -106,5 +104,6 @@
     </footer>
 </body>
 <script src="scripts/common.js" defer></script>
+<script src="modules/html2pdf.bundle.min.js"></script>
 <script src="scripts/agenda.js" defer></script>
 </html>

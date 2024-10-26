@@ -1,15 +1,18 @@
-const familyName = document.querySelector("#family-name")
-const firstHymn = document.querySelector("#first-hymn")
-const firstPrayer = document.querySelector("#first-prayer")
-const messageAssignment = document.querySelector("#message-assignment")
-const messageTopic = document.querySelector("#message-topic")
-const gameAssignment = document.querySelector("#game-assignment")
-const finalHymn = document.querySelector("#final-hymn")
-const finalPrayer = document.querySelector("#final-prayer")
-const treatAssignment = document.querySelector("#treat-assignment")
-const treatRecipe = document.querySelector("#treat-recipe")
+const familyName = document.querySelector("#family-name");
+const firstHymn = document.querySelector("#first-hymn");
+const firstPrayer = document.querySelector("#first-prayer");
+const messageAssignment = document.querySelector("#message-assignment");
+const messageTopic = document.querySelector("#message-topic");
+const gameAssignment = document.querySelector("#game-assignment");
+const finalHymn = document.querySelector("#final-hymn");
+const finalPrayer = document.querySelector("#final-prayer");
+const treatAssignment = document.querySelector("#treat-assignment");
+const treatRecipe = document.querySelector("#treat-recipe");
 const saveButton = document.querySelector('#save-button');
 const savePrint = document.querySelector('#print-button');
+const deleteButton = document.querySelector('#delete-button');
+const printModal = document.querySelector('#agenda-print');
+const agendaForm = document.querySelector('#agenda-form');
 
 const saveForm = () => {
     const current_date = new Date();
@@ -45,17 +48,22 @@ const loadForm = () => {
     }
 }
 
-const printAgenda = () => {
+const clearData = () => {
+    localStorage.removeItem('agenda');
+    agendaForm.reset();
 }
 
 saveButton.addEventListener('click', () => {
     saveForm();
 });
 
-// saveButton.addEventListener('click', () => {
-//     saveForm();
-// });
+deleteButton.addEventListener('click', () => {
+    clearData();
+});
+
+savePrint.addEventListener('click', () => {
+    saveForm();
+    window.open('agenda.html', '_blank').focus();
+});
 
 loadForm();
-// const today_agenda = new Date();
-// console.log(today.toDateString());
