@@ -70,9 +70,9 @@ async function displayRecipes(recipeQty,searchTerms) {
     loader.close();
 }
 
-// getRecipes();
-
 // General event Listeners
 displayButton.addEventListener('click', () => {
     displayRecipes(parseInt(recipeQty.value), searchTerms.value);
 });
+
+// displayRecipes(6,'');
